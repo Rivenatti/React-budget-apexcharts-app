@@ -1,0 +1,47 @@
+.budget__positions {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.budget__positions .budget__balance {
+  background-color: #ddd;
+  font-size: 2rem;
+}
+
+.budget__positions .budget__balance .budget__position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+
+.budget__positions .budget__balance .budget__position.budget__position--positive {
+  background-color: limegreen;
+}
+
+.budget__positions .budget__balance .budget__position.budget__position--negative {
+  background-color: red;
+}
+
+.budget__positions .budget__balance .budget__position:not(:first-child) {
+  border-top: 1px solid orange;
+}
+
+.budget__positions .budget__balance .budget__position .delete {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: orangered;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+
+.budget__positions .budget__balance .budget__position .delete:hover {
+  background-color: #e63e00;
+}
+/*# sourceMappingURL=BudgetPositions.css.map */

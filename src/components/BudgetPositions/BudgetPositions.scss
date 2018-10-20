@@ -1,0 +1,52 @@
+// variables
+$budget__balance__background--color: #ddd;
+$position__border--color: orange;
+$position--positive__background--color: limegreen;
+$position--negative__background--color: red;
+$position__button__background--color: orangered;
+
+//-------------------------- POSITIONS WRAPPER -------------------------------
+.budget__positions {
+  width: 90%;
+  margin: 0 auto;
+
+  //----------------------------- BALANCE -------------------------------
+  .budget__balance {
+    background-color: $budget__balance__background--color;
+    font-size: 2rem;
+
+    //-------------------------- POSITION -------------------------------
+    .budget__position {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+
+      &.budget__position--positive {
+        background-color: $position--positive__background--color;
+      }
+
+      &.budget__position--negative {
+        background-color: $position--negative__background--color;
+      }
+
+      &:not(:first-child) {
+        border-top: 1px solid $position__border--color;
+      }
+
+      .delete {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: $position__button__background--color;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        border: 0;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($position__button__background--color, 5%);
+        }
+      }
+    } // end of position
+  } // end of balance
+} // end of wrapper

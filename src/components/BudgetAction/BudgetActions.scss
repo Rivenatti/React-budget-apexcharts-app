@@ -1,0 +1,27 @@
+.budget--action {
+  width: 90%;
+  padding: 1rem;
+
+  input {
+    border-radius: 0.3rem;
+    border: 1px solid black;
+    text-indent: 0.3rem;
+  }
+
+  .description__input {
+    width: 50%;
+  }
+
+  .value__input {
+    width: 19%;
+    margin-left: 0.3rem;
+  }
+
+  button {
+    width: 28%;
+    margin-left: 0.3rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+}
