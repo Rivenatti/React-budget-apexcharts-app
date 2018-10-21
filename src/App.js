@@ -7,12 +7,14 @@ import BudgetPositions from "./components/BudgetPositions/BudgetPositions";
 
 class App extends Component {
   state = {
-    positions: []
+    positions: [],
+    balance: 0
   };
 
-  handleSubmit = data => {
+  handleSubmit = position => {
     this.setState({
-      positions: [...this.state.positions, data]
+      ...this.state,
+      positions: [...this.state.positions, position]
     });
   };
 
@@ -47,9 +49,10 @@ class App extends Component {
   };
 
   render() {
+    console.log("APP state", this.state);
     return (
       <div className="App">
-        <ApexCharts />
+        <ApexCharts balance={this.calculateBalance()} />
         <Balance
           balance={this.calculateBalance()}
           income={this.calculateIncome()}

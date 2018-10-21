@@ -9,7 +9,7 @@ class ApexCharts extends Component {
         foreColor: "#ddd"
       },
       xaxis: {
-        categories: ["asdad", "asdas", "asdasd", "asdasdas", "asdasd"]
+        categories: [" "]
       },
       plotOptions: {
         bar: {
@@ -23,7 +23,7 @@ class ApexCharts extends Component {
         enabled: false
       },
       title: {
-        text: "Title",
+        text: "BALANCE",
         align: "center",
         margin: 20,
         offsetY: 20,
@@ -38,16 +38,29 @@ class ApexCharts extends Component {
         opacity: 0.5
       }
     },
-
     series: [
       {
-        name: "population",
-        data: [123123123, 12313123, 123124152, 345345346, 356425432]
+        name: "balance",
+        data: []
       }
     ]
   };
 
+  componentWillReceiveProps = () => {
+    const { balance } = this.props;
+    console.log(balance);
+    this.setState({
+      ...this.state,
+      series: [
+        {
+          data: [this.props.balance]
+        }
+      ]
+    });
+  };
+
   render() {
+    // console.log("state", this.state.series[0]);
     return (
       <Chart
         options={this.state.options}

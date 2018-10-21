@@ -3,7 +3,6 @@ import "./Balance.css";
 
 class Balance extends Component {
   render() {
-    console.log(this.props);
     return (
       <div className="balance">
         <div className="totalBalance">Balance: {this.props.balance}</div>
