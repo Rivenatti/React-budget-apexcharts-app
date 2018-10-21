@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import ApexCharts from "./components/ApexCharts/ApexCharts";
 import Balance from "./components/Balance/Balance";
 import BudgetAction from "./components/BudgetAction/BudgetAction";
 import BudgetPositions from "./components/BudgetPositions/BudgetPositions";
@@ -48,6 +49,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <ApexCharts />
         <Balance
           balance={this.calculateBalance()}
           income={this.calculateIncome()}

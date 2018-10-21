@@ -1,6 +1,7 @@
 .budget__positions {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 1rem auto;
+  overflow: hidden;
 }
 
 .budget__positions .budget__balance {
@@ -16,6 +17,13 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem;
+  position: relative;
+}
+
+.budget__positions .budget__balance .budget__position:hover {
+  padding-right: 4rem;
+  -webkit-transition: padding 0.5s;
+  transition: padding 0.5s;
 }
 
 .budget__positions .budget__balance .budget__position.budget__position--positive {
@@ -31,6 +39,15 @@
 }
 
 .budget__positions .budget__balance .budget__position .delete {
+  position: absolute;
+  opacity: 0;
+  right: 1rem;
+}
+
+.budget__positions .budget__balance .budget__position:hover .delete {
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  opacity: 100;
   width: 2.5rem;
   height: 2.5rem;
   background-color: orangered;
@@ -42,7 +59,7 @@
   cursor: pointer;
 }
 
-.budget__positions .budget__balance .budget__position .delete:hover {
+.budget__positions .budget__balance .budget__position:hover .delete:hover {
   background-color: #e63e00;
 }
 /*# sourceMappingURL=BudgetPositions.css.map */

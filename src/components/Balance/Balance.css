@@ -6,8 +6,12 @@
 }
 
 .balance .totalBalance {
-  width: 100%;
+  width: 75%;
+  margin: 0 auto;
   text-align: center;
+  background-color: #006eff;
+  padding: 0.75rem;
+  color: #fff;
 }
 
 .balance .row {
@@ -20,10 +24,14 @@
 }
 
 .balance .row .income {
-  color: limegreen;
+  background-color: limegreen;
+  padding: 0.75rem;
+  color: #fff;
 }
 
 .balance .row .outcome {
-  color: red;
+  background-color: red;
+  padding: 0.75rem;
+  color: #fff;
 }
 /*# sourceMappingURL=Balance.css.map */

@@ -1,3 +1,9 @@
+// VARIABLES
+$totalBalance__background--color: rgb(0, 110, 255);
+$income__background--color: limegreen;
+$outcome__background--color: red;
+$color: #fff;
+
 //-------------------------- BALANCE --------------------------
 .balance {
   width: 90%;
@@ -7,8 +13,12 @@
 
   //-------------------------- TOTAL -------------------------
   .totalBalance {
-    width: 100%;
+    width: 75%;
+    margin: 0 auto;
     text-align: center;
+    background-color: $totalBalance__background--color;
+    padding: 0.75rem;
+    color: $color;
   }
 
   //-------------------------- ROW --------------------------
@@ -19,12 +29,16 @@
 
     //-------------------------- INCOME ---------------------
     .income {
-      color: limegreen;
+      background-color: $income__background--color;
+      padding: 0.75rem;
+      color: $color;
     } // end of income
 
     //-------------------------- OUTCOME --------------------
     .outcome {
-      color: red;
+      background-color: $outcome__background--color;
+      padding: 0.75rem;
+      color: $color;
     } // end of outcome
   } // end of row
 } // end of balance

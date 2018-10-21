@@ -1,4 +1,4 @@
-// variables
+// VARIABLES
 $budget__balance__background--color: #ddd;
 $position__border--color: orange;
 $position--positive__background--color: limegreen;
@@ -8,7 +8,8 @@ $position__button__background--color: orangered;
 //-------------------------- POSITIONS WRAPPER --------------------------
 .budget__positions {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 1rem auto;
+  overflow: hidden;
 
   //----------------------------- BALANCE -------------------------------
   .budget__balance {
@@ -20,11 +21,18 @@ $position__button__background--color: orangered;
       display: flex;
       justify-content: space-between;
       padding: 1rem;
+      position: relative;
 
+      &:hover {
+        padding-right: 4rem;
+        transition: padding 0.5s;
+      }
+
+      //----------------------------- POSITIVE -------------------------------
       &.budget__position--positive {
         background-color: $position--positive__background--color;
       }
-
+      //----------------------------- NEGATIVE -------------------------------
       &.budget__position--negative {
         background-color: $position--negative__background--color;
       }
@@ -32,22 +40,32 @@ $position__button__background--color: orangered;
       &:not(:first-child) {
         border-top: 1px solid $position__border--color;
       }
-
+      //----------------------------- DELETE BUTTON ------------------------
       .delete {
-        width: 2.5rem;
-        height: 2.5rem;
-        background-color: $position__button__background--color;
-        color: white;
-        text-align: center;
-        font-weight: bold;
-        border: 0;
-        border-radius: 50%;
-        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+        right: 1rem;
+      }
+      &:hover {
+        .delete {
+          transition: opacity 1s;
+          opacity: 100;
 
-        &:hover {
-          background-color: darken($position__button__background--color, 5%);
+          width: 2.5rem;
+          height: 2.5rem;
+          background-color: $position__button__background--color;
+          color: white;
+          text-align: center;
+          font-weight: bold;
+          border: 0;
+          border-radius: 50%;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken($position__button__background--color, 5%);
+          }
         }
       }
     } // end of position
   } // end of balance
-} // end of wrapper
+} // end of positons wrapper

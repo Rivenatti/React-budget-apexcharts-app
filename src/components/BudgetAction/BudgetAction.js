@@ -31,6 +31,7 @@ class BudgetAction extends Component {
           />
           <input
             type="text"
+            placeholder="value"
             name="value"
             pattern="^-?[0-9]\d*(\.\d+)?$"
             onChange={this.onChangeDescriptionHandler}

@@ -1,28 +1,46 @@
+// VARIABLES
+$input__border: 0.2rem solid #006eff;
+$input__background--color: #444;
+$input--color: #fff;
+
+//----------------------------- ACTIONS WRAPPER -----------------------------
 .budget--action {
   width: 90%;
   padding: 1rem 0;
   margin: 0 auto;
 
+  //----------------------------- ALL INPUTS -------------------------------
   input {
     border-radius: 0.3rem;
-    border: 1px solid black;
     text-indent: 0.3rem;
+    border: $input__border;
+    padding: 0.5rem;
+    background-color: $input__background--color;
+    color: $input--color;
+    font-weight: bold;
   }
 
+  //----------------------------- DESCRIPTION -------------------------------
   .description__input {
     width: 50%;
   }
 
+  //----------------------------- VALUE -------------------------------
   .value__input {
     width: 19%;
     margin-left: 0.3rem;
   }
 
+  //----------------------------- BUTTON -------------------------------
   button {
     width: 28%;
     margin-left: 0.3rem;
     border-radius: 0.5rem;
-    border: 1px solid black;
+    border: $input__border;
+    padding: 0.5rem;
+    background-color: $input__background--color;
+    color: $input--color;
+    font-weight: bold;
     cursor: pointer;
-  }
-}
+  } // end of button
+} // end of budget--action

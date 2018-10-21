@@ -6,8 +6,12 @@
 
 .budget--action input {
   border-radius: 0.3rem;
-  border: 1px solid black;
   text-indent: 0.3rem;
+  border: 0.2rem solid #006eff;
+  padding: 0.5rem;
+  background-color: #444;
+  color: #fff;
+  font-weight: bold;
 }
 
 .budget--action .description__input {
@@ -23,7 +27,11 @@
   width: 28%;
   margin-left: 0.3rem;
   border-radius: 0.5rem;
-  border: 1px solid black;
+  border: 0.2rem solid #006eff;
+  padding: 0.5rem;
+  background-color: #444;
+  color: #fff;
+  font-weight: bold;
   cursor: pointer;
 }
 /*# sourceMappingURL=BudgetActions.css.map */
