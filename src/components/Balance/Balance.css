@@ -1,0 +1,29 @@
+.balance {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.balance .totalBalance {
+  width: 100%;
+  text-align: center;
+}
+
+.balance .row {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.balance .row .income {
+  color: limegreen;
+}
+
+.balance .row .outcome {
+  color: red;
+}
+/*# sourceMappingURL=Balance.css.map */

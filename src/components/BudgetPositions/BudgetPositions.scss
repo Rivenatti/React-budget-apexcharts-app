@@ -5,7 +5,7 @@ $position--positive__background--color: limegreen;
 $position--negative__background--color: red;
 $position__button__background--color: orangered;
 
-//-------------------------- POSITIONS WRAPPER -------------------------------
+//-------------------------- POSITIONS WRAPPER --------------------------
 .budget__positions {
   width: 90%;
   margin: 0 auto;
@@ -41,6 +41,7 @@ $position__button__background--color: orangered;
         text-align: center;
         font-weight: bold;
         border: 0;
+        border-radius: 50%;
         cursor: pointer;
 
         &:hover {

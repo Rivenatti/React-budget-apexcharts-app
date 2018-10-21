@@ -1,19 +1,27 @@
 import React from "react";
 import "./BudgetPositions.css";
 
-const BudgetPositions = props => {
+const budgetPositions = props => {
+  // HANDLE DELETE
   const handleDelete = description => {
     props.delete(description);
+  };
+
+  // FILTER POSITIVE AND NEGATIVE BUDGET POSITIONS
+  const filteredPositions = value => {
+    return value >= 0
+      ? "budget__position budget__position--positive"
+      : "budget__position budget__position--negative";
   };
 
   return (
     <div className="budget__positions">
       <div className="budget__balance">
-        {props.positions.map((position, index) => {
-          return position.value >= 0 ? (
+        {props.positions.map(position => {
+          return (
             <div
-              className="budget__position budget__position--positive"
               key={position.description}
+              className={filteredPositions(position.value)}
             >
               <span className="actionName">{position.description}</span>
               <span className="moneyAmount">{position.value}</span>
@@ -24,14 +32,6 @@ const BudgetPositions = props => {
                 X
               </button>
             </div>
-          ) : (
-            <div
-              className="budget__position budget__position--negative"
-              key={index}
-            >
-              <span className="actionName">{position.description}</span>
-              <span className="moneyAmount">{position.value}</span>
-            </div>
           );
         })}
       </div>
@@ -39,4 +39,4 @@ const BudgetPositions = props => {
   );
 };
 
-export default BudgetPositions;
+export default budgetPositions;

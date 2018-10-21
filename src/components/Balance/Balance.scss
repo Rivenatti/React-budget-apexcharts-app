@@ -1,0 +1,30 @@
+//-------------------------- BALANCE --------------------------
+.balance {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 2rem;
+  padding: 1rem 0;
+
+  //-------------------------- TOTAL -------------------------
+  .totalBalance {
+    width: 100%;
+    text-align: center;
+  }
+
+  //-------------------------- ROW --------------------------
+  .row {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+
+    //-------------------------- INCOME ---------------------
+    .income {
+      color: limegreen;
+    } // end of income
+
+    //-------------------------- OUTCOME --------------------
+    .outcome {
+      color: red;
+    } // end of outcome
+  } // end of row
+} // end of balance
