@@ -55,17 +55,27 @@ class App extends Component {
     });
   };
 
-  handleDelete = description => {
+  handleDelete = key => {
+    let position = this.state.positions.filter(pos => pos.key === key);
+    let positionValue = position[0].value;
+
+    let balanceDelete =
+      this.state.series[0].data[this.state.series[0].data.length - 1] -
+      positionValue;
+
     this.setState({
-      positions: this.state.positions.filter(
-        pos => pos.description !== description
-      )
+      positions: this.state.positions.filter(pos => pos.key !== key),
+
+      series: [
+        {
+          ...this.state.series[0],
+          data: [...this.state.series[0].data, balanceDelete]
+        }
+      ]
     });
   };
 
   render() {
-    console.log("---- RENDER ----");
-    // console.log("APP state", this.state);
     return (
       <div className="App">
         <ApexCharts series={this.state.series} />

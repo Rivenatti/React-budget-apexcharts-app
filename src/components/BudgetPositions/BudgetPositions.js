@@ -20,14 +20,14 @@ const budgetPositions = props => {
         {props.positions.map(position => {
           return (
             <div
-              key={position.description}
+              key={position.key}
               className={filteredPositions(position.value)}
             >
               <span className="actionName">{position.description}</span>
               <span className="moneyAmount">{position.value}</span>
               <button
                 className="delete"
-                onClick={() => handleDelete(position.description)}
+                onClick={() => handleDelete(position.key)}
               >
                 X
               </button>

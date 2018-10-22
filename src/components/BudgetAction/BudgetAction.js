@@ -4,7 +4,12 @@ import "./BudgetActions.css";
 class BudgetAction extends Component {
   state = {
     description: "",
-    value: 0
+    value: 0,
+    key: 0
+  };
+
+  getKey = () => {
+    return this.state.key + 1;
   };
 
   onChangeDescriptionHandler = event => {
@@ -15,6 +20,10 @@ class BudgetAction extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    this.setState({
+      ...this.state,
+      key: this.getKey()
+    });
     this.props.handleSubmit(this.state);
   };
 
