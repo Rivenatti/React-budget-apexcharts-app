@@ -8,22 +8,12 @@ import BudgetPositions from "./components/BudgetPositions/BudgetPositions";
 class App extends Component {
   state = {
     positions: [],
-    balance: 0
-  };
-
-  handleSubmit = position => {
-    this.setState({
-      ...this.state,
-      positions: [...this.state.positions, position]
-    });
-  };
-
-  handleDelete = description => {
-    this.setState({
-      positions: this.state.positions.filter(
-        pos => pos.description !== description
-      )
-    });
+    series: [
+      {
+        name: "balance",
+        data: [0]
+      }
+    ]
   };
 
   calculateBalance = () => {
@@ -48,11 +38,37 @@ class App extends Component {
     return outcome;
   };
 
+  handleSubmit = position => {
+    let balanceAdd =
+      this.state.series[0].data[this.state.series[0].data.length - 1] +
+      parseFloat(position.value);
+
+    this.setState({
+      ...this.state,
+      positions: [...this.state.positions, position],
+      series: [
+        {
+          ...this.state.series[0],
+          data: [...this.state.series[0].data, balanceAdd]
+        }
+      ]
+    });
+  };
+
+  handleDelete = description => {
+    this.setState({
+      positions: this.state.positions.filter(
+        pos => pos.description !== description
+      )
+    });
+  };
+
   render() {
-    console.log("APP state", this.state);
+    console.log("---- RENDER ----");
+    // console.log("APP state", this.state);
     return (
       <div className="App">
-        <ApexCharts balance={this.calculateBalance()} />
+        <ApexCharts series={this.state.series} />
         <Balance
           balance={this.calculateBalance()}
           income={this.calculateIncome()}

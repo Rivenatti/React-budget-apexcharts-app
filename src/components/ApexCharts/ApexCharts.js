@@ -37,38 +37,23 @@ class ApexCharts extends Component {
         colors: ["#f3f3f3", "transparent"],
         opacity: 0.5
       }
-    },
-    series: [
-      {
-        name: "balance",
-        data: []
-      }
-    ]
-  };
-
-  componentWillReceiveProps = () => {
-    const { balance } = this.props;
-    console.log(balance);
-    this.setState({
-      ...this.state,
-      series: [
-        {
-          data: [this.props.balance]
-        }
-      ]
-    });
+    }
   };
 
   render() {
-    // console.log("state", this.state.series[0]);
+    // console.log("Apex props", this.props);
+    // console.log("Apex state series", this.state.series);
     return (
-      <Chart
-        options={this.state.options}
-        series={this.state.series}
-        type="line"
-        height="250"
-        width="90%"
-      />
+      <div>
+        <Chart
+          options={this.state.options}
+          series={this.props.series}
+          type="line"
+          height="250"
+          width="90%"
+        />
+        {/* <button onClick={this.handleRefresh}>Refresh</button> */}
+      </div>
     );
   }
 }
