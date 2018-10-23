@@ -59,9 +59,16 @@ class App extends Component {
     let position = this.state.positions.filter(pos => pos.key === key);
     let positionValue = position[0].value;
 
-    let balanceDelete =
-      this.state.series[0].data[this.state.series[0].data.length - 1] -
-      positionValue;
+    let indexOfPosition =
+      this.state.positions.findIndex(i => i.key === position[0].key) + 1;
+
+    let balanceDel = this.state.series[0].data.slice();
+
+    balanceDel.splice(indexOfPosition, 1);
+
+    for (let i = indexOfPosition; i < balanceDel.length; i++) {
+      balanceDel[i] -= positionValue;
+    }
 
     this.setState({
       positions: this.state.positions.filter(pos => pos.key !== key),
@@ -69,7 +76,7 @@ class App extends Component {
       series: [
         {
           ...this.state.series[0],
-          data: [...this.state.series[0].data, balanceDelete]
+          data: balanceDel
         }
       ]
     });
