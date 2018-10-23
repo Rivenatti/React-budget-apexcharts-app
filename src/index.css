@@ -8,3 +8,11 @@
 html {
   font-size: 10px;
 }
+
+.apexcharts-canvas {
+  margin: 1rem auto 0 auto;
+}
+
+body {
+  background-color: #313439;
+}

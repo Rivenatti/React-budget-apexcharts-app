@@ -27,15 +27,15 @@
 }
 
 .budget__positions .budget__balance .budget__position.budget__position--positive {
-  background-color: limegreen;
+  background-color: #58bb43;
 }
 
 .budget__positions .budget__balance .budget__position.budget__position--negative {
-  background-color: red;
+  background-color: #d84e5b;
 }
 
 .budget__positions .budget__balance .budget__position:not(:first-child) {
-  border-top: 1px solid orange;
+  border-top: 1px solid #313439;
 }
 
 .budget__positions .budget__balance .budget__position .delete {

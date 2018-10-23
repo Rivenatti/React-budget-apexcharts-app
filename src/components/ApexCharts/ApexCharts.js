@@ -5,8 +5,8 @@ class ApexCharts extends Component {
   state = {
     options: {
       chart: {
-        background: "f4f4f4",
-        foreColor: "#ddd"
+        background: "#3b3e42",
+        foreColor: "#DF8C51"
       },
       xaxis: {
         categories: [" "]
@@ -17,7 +17,7 @@ class ApexCharts extends Component {
         }
       },
       fill: {
-        colors: ["#f44336"]
+        colors: ["#2a86ff"]
       },
       dataLabels: {
         enabled: false
@@ -28,7 +28,8 @@ class ApexCharts extends Component {
         margin: 20,
         offsetY: 20,
         style: {
-          fontSize: "25px"
+          fontSize: "25px",
+          color: "#DF8C51"
         }
       }
     },
@@ -41,8 +42,6 @@ class ApexCharts extends Component {
   };
 
   render() {
-    // console.log("Apex props", this.props);
-    // console.log("Apex state series", this.state.series);
     return (
       <div>
         <Chart
@@ -52,7 +51,6 @@ class ApexCharts extends Component {
           height="250"
           width="90%"
         />
-        {/* <button onClick={this.handleRefresh}>Refresh</button> */}
       </div>
     );
   }

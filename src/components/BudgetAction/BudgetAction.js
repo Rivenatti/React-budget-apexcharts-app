@@ -3,8 +3,8 @@ import "./BudgetActions.css";
 
 class BudgetAction extends Component {
   state = {
-    description: "",
-    value: 0,
+    description: null,
+    value: null,
     key: 0
   };
 
@@ -22,9 +22,10 @@ class BudgetAction extends Component {
     event.preventDefault();
     this.setState({
       ...this.state,
-      key: this.getKey()
+      key: this.getKey(),
+      description: null,
+      value: 0
     });
-    this.props.handleSubmit(this.state);
   };
 
   render() {
@@ -33,18 +34,20 @@ class BudgetAction extends Component {
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
-            placeholder="description"
+            placeholder="description..."
             name="description"
             onChange={this.onChangeDescriptionHandler}
             className="description__input"
+            value={this.state.description}
           />
           <input
             type="text"
-            placeholder="value"
+            placeholder="value..."
             name="value"
             pattern="^-?[0-9]\d*(\.\d+)?$"
             onChange={this.onChangeDescriptionHandler}
             className="value__input"
+            value={this.state.value}
           />
           <button>Submit</button>
         </form>

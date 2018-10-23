@@ -9,7 +9,7 @@
   width: 75%;
   margin: 0 auto;
   text-align: center;
-  background-color: #006eff;
+  background-color: #2a86ff;
   padding: 0.75rem;
   color: #fff;
 }
@@ -24,13 +24,13 @@
 }
 
 .balance .row .income {
-  background-color: limegreen;
+  background-color: #58bb43;
   padding: 0.75rem;
   color: #fff;
 }
 
 .balance .row .outcome {
-  background-color: red;
+  background-color: #d84e5b;
   padding: 0.75rem;
   color: #fff;
 }

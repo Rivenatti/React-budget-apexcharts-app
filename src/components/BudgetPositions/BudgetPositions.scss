@@ -1,8 +1,8 @@
 // VARIABLES
 $budget__balance__background--color: #ddd;
-$position__border--color: orange;
-$position--positive__background--color: limegreen;
-$position--negative__background--color: red;
+$position__border--color: #313439;
+$position--positive__background--color: #58bb43;
+$position--negative__background--color: #d84e5b;
 $position__button__background--color: orangered;
 
 //-------------------------- POSITIONS WRAPPER --------------------------
@@ -28,11 +28,11 @@ $position__button__background--color: orangered;
         transition: padding 0.5s;
       }
 
-      //----------------------------- POSITIVE -------------------------------
+      //----------------------------- POSITIVE ------------------------------
       &.budget__position--positive {
         background-color: $position--positive__background--color;
       }
-      //----------------------------- NEGATIVE -------------------------------
+      //----------------------------- NEGATIVE ------------------------------
       &.budget__position--negative {
         background-color: $position--negative__background--color;
       }
