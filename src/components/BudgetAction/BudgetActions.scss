@@ -44,3 +44,23 @@ $input--color: #fff;
     cursor: pointer;
   } // end of button
 } // end of budget--action
+
+//----------------------------- MEDIA 768px ------------------------
+@media only screen and (min-width: 768px) {
+  .budget--action {
+    width: 70%;
+  }
+}
+
+//----------------------------- MEDIA 1200px ------------------------
+@media only screen and (min-width: 1200px) {
+  .budget--action {
+    width: 55%;
+  }
+}
+//----------------------------- Media 1920px ------------------------
+@media only screen and (min-width: 1920px) {
+  .budget--actione {
+    width: 40%;
+  }
+}

@@ -69,3 +69,23 @@ $position__button__background--color: orangered;
     } // end of position
   } // end of balance
 } // end of positons wrapper
+
+//----------------------------- MEDIA 768px ------------------------
+@media only screen and (min-width: 768px) {
+  .budget__positions {
+    width: 70%;
+  }
+}
+
+//----------------------------- MEDIA 1200px ------------------------
+@media only screen and (min-width: 1200px) {
+  .budget__positions {
+    width: 55%;
+  }
+}
+//----------------------------- Media 1920px ------------------------
+@media only screen and (min-width: 1920px) {
+  .budget__positions {
+    width: 40%;
+  }
+}

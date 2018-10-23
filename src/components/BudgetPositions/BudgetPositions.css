@@ -62,4 +62,22 @@
 .budget__positions .budget__balance .budget__position:hover .delete:hover {
   background-color: #e63e00;
 }
+
+@media only screen and (min-width: 768px) {
+  .budget__positions {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .budget__positions {
+    width: 55%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .budget__positions {
+    width: 40%;
+  }
+}
 /*# sourceMappingURL=BudgetPositions.css.map */

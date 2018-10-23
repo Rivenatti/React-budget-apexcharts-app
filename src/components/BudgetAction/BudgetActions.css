@@ -34,4 +34,22 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+@media only screen and (min-width: 768px) {
+  .budget--action {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .budget--action {
+    width: 55%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .budget--actione {
+    width: 40%;
+  }
+}
 /*# sourceMappingURL=BudgetActions.css.map */

@@ -42,3 +42,23 @@ $color: #fff;
     } // end of outcome
   } // end of row
 } // end of balance
+
+//----------------------------- MEDIA 768px ------------------------
+@media only screen and (min-width: 768px) {
+  .balance {
+    width: 70%;
+  }
+}
+
+//----------------------------- MEDIA 1200px ------------------------
+@media only screen and (min-width: 1200px) {
+  .balance {
+    width: 55%;
+  }
+}
+//----------------------------- Media 1920px ------------------------
+@media only screen and (min-width: 1920px) {
+  .balance {
+    width: 40%;
+  }
+}

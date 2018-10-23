@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import ApexCharts from "./components/ApexCharts/ApexCharts";
 import Balance from "./components/Balance/Balance";
 import BudgetAction from "./components/BudgetAction/BudgetAction";
@@ -82,7 +81,20 @@ class App extends Component {
     });
   };
 
+  componentDidUpdate = () => {
+    localStorage.setItem("state", JSON.stringify(this.state));
+  };
+
+  componentDidMount = () => {
+    let localState = JSON.parse(localStorage.getItem("state"));
+
+    this.setState({
+      ...localState
+    });
+  };
+
   render() {
+    console.log("APP STATE", this.state);
     return (
       <div className="App">
         <ApexCharts series={this.state.series} />
