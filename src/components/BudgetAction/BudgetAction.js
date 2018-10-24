@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./BudgetActions.css";
+import "./BudgetAction.css";
 
 class BudgetAction extends Component {
   state = {
-    description: null,
-    value: null,
+    description: "",
+    value: 0,
     key: 0
   };
 
@@ -22,15 +22,24 @@ class BudgetAction extends Component {
     event.preventDefault();
     this.setState({
       ...this.state,
-      key: this.getKey(),
-      description: null,
-      value: 0
+      key: this.getKey()
+    });
+    this.props.handleSubmit(this.state);
+  };
+
+  componentDidMount = () => {
+    let getLocalKey = JSON.parse(localStorage.getItem("key")) + 1;
+
+    this.setState({
+      ...this.state,
+      key: getLocalKey === null ? 0 : getLocalKey
     });
   };
 
   render() {
     return (
       <div className="budget--action">
+        <h1>Add new action</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
@@ -38,7 +47,7 @@ class BudgetAction extends Component {
             name="description"
             onChange={this.onChangeDescriptionHandler}
             className="description__input"
-            value={this.state.description}
+            ref="description"
           />
           <input
             type="text"
@@ -47,7 +56,6 @@ class BudgetAction extends Component {
             pattern="^-?[0-9]\d*(\.\d+)?$"
             onChange={this.onChangeDescriptionHandler}
             className="value__input"
-            value={this.state.value}
           />
           <button>Submit</button>
         </form>

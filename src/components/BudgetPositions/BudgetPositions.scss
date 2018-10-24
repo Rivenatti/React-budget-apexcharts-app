@@ -8,8 +8,16 @@ $position__button__background--color: orangered;
 //-------------------------- POSITIONS WRAPPER --------------------------
 .budget__positions {
   width: 90%;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto;
   overflow: hidden;
+  padding: 2rem 0;
+
+  h1 {
+    font-size: 3rem;
+    color: #df8c51;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
   //----------------------------- BALANCE -------------------------------
   .budget__balance {
@@ -19,7 +27,7 @@ $position__button__background--color: orangered;
     //-------------------------- POSITION -------------------------------
     .budget__position {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       padding: 1rem;
       position: relative;
 

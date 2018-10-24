@@ -1,7 +1,15 @@
 .budget__positions {
   width: 90%;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto;
   overflow: hidden;
+  padding: 2rem 0;
+}
+
+.budget__positions h1 {
+  font-size: 3rem;
+  color: #df8c51;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .budget__positions .budget__balance {
@@ -13,9 +21,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 1rem;
   position: relative;
 }

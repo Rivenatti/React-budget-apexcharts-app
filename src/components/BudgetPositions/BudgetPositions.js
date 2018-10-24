@@ -16,6 +16,7 @@ const budgetPositions = props => {
 
   return (
     <div className="budget__positions">
+      <h1>History</h1>
       <div className="budget__balance">
         {props.positions.map(position => {
           return (
@@ -23,6 +24,7 @@ const budgetPositions = props => {
               key={position.key}
               className={filteredPositions(position.value)}
             >
+              <span>{position.key}.</span>
               <span className="actionName">{position.description}</span>
               <span className="moneyAmount">{position.value}</span>
               <button

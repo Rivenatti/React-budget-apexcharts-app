@@ -1,4 +1,5 @@
 // VARIABLES
+$balance__boder-bottom--color: #df8c51;
 $totalBalance__background--color: #2a86ff;
 $income__background--color: #58bb43;
 $outcome__background--color: #d84e5b;
@@ -9,7 +10,8 @@ $color: #fff;
   width: 90%;
   margin: 0 auto;
   font-size: 2rem;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  border-bottom: 0.15rem solid $balance__boder-bottom--color;
 
   //-------------------------- TOTAL -------------------------
   .totalBalance {

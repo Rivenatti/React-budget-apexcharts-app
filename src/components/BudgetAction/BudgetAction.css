@@ -1,0 +1,78 @@
+.budget--action {
+  width: 90%;
+  padding: 2rem 0;
+  margin: 0 auto;
+  border-bottom: 0.15rem solid #df8c51;
+}
+
+.budget--action h1 {
+  font-size: 3rem;
+  color: #df8c51;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.budget--action form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.budget--action form input {
+  border-radius: 0.3rem;
+  text-indent: 0.3rem;
+  border: 0;
+  padding: 0.5rem;
+  background-color: #3b3e42;
+  color: #fff;
+  font-weight: bold;
+}
+
+.budget--action form .description__input {
+  width: 48%;
+}
+
+.budget--action form .description__input:focus {
+  border: 0.1rem solid #006eff;
+}
+
+.budget--action form .value__input {
+  width: 19%;
+}
+
+.budget--action form .value__input:focus {
+  border: 0.1rem solid #006eff;
+}
+
+.budget--action form button {
+  width: 30%;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #006eff;
+  padding: 0.5rem;
+  background-color: #3b3e42;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .budget--action {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .budget--action {
+    width: 55%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .budget--action {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=BudgetAction.css.map */

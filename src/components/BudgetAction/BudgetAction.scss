@@ -1,0 +1,85 @@
+// VARIABLES
+$input__border: 0.1rem solid #006eff;
+$input__background--color: #3b3e42;
+$input--color: #fff;
+
+//----------------------------- ACTION WRAPPER ----------------------
+.budget--action {
+  width: 90%;
+  padding: 2rem 0;
+  margin: 0 auto;
+  border-bottom: 0.15rem solid #df8c51;
+
+  h1 {
+    font-size: 3rem;
+    color: #df8c51;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  //----------------------------- FORM ------------------------
+  form {
+    display: flex;
+    justify-content: space-between;
+
+    //----------------------------- ALL INPUTS ------------------------
+    input {
+      border-radius: 0.3rem;
+      text-indent: 0.3rem;
+      border: 0;
+      padding: 0.5rem;
+      background-color: $input__background--color;
+      color: $input--color;
+      font-weight: bold;
+    }
+
+    //----------------------------- DESCRIPTION -------------------------
+    .description__input {
+      width: 48%;
+
+      &:focus {
+        border: $input__border;
+      }
+    }
+
+    //----------------------------- VALUE -------------------------------
+    .value__input {
+      width: 19%;
+
+      &:focus {
+        border: $input__border;
+      }
+    }
+
+    //----------------------------- BUTTON -----------------------------
+    button {
+      width: 30%;
+      border-radius: 0.5rem;
+      border: $input__border;
+      padding: 0.5rem;
+      background-color: $input__background--color;
+      color: $input--color;
+      font-weight: bold;
+      cursor: pointer;
+    } // end of button
+  } // end of form
+} // end of budget--action
+
+//----------------------------- MEDIA 768px ------------------------
+@media only screen and (min-width: 768px) {
+  .budget--action {
+    width: 70%;
+  }
+}
+
+//----------------------------- MEDIA 1200px ------------------------
+@media only screen and (min-width: 1200px) {
+  .budget--action {
+    width: 55%;
+  }
+}
+//----------------------------- Media 1920px ------------------------
+@media only screen and (min-width: 1920px) {
+  .budget--action {
+    width: 40%;
+  }
+}
