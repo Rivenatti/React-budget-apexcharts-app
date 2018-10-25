@@ -1,12 +1,16 @@
 // VARIABLES
-$budget__balance__background--color: #ddd;
-$position__border--color: #313439;
+$budget__history__heading--color: #df8c51;
+$budget__position__border--color: #df8c51;
+$budget__header__background--color: #3c4044;
+$budget__border--color: #df8c51;
+$budget__header--color: #df8c51;
+$budget__header__border--color: #df8c51;
 $position--positive__background--color: #58bb43;
 $position--negative__background--color: #d84e5b;
-$position__button__background--color: orangered;
+$position__button__background--color: silver;
 
-//-------------------------- POSITIONS WRAPPER --------------------------
-.budget__positions {
+//-------------------------- BUDGET HISTORY --------------------------
+.budget__history {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
@@ -14,86 +18,177 @@ $position__button__background--color: orangered;
 
   h1 {
     font-size: 3rem;
-    color: #df8c51;
+    color: $budget__history__heading--color;
     text-align: center;
     margin-bottom: 2rem;
   }
 
-  //----------------------------- BALANCE -------------------------------
-  .budget__balance {
-    background-color: $budget__balance__background--color;
-    font-size: 2rem;
+  //---------------------- BUDGET HISTORY FILTER ----------------------
+  .budget__history--filter {
+    margin: 0 0 1rem 2rem;
 
-    //-------------------------- POSITION -------------------------------
+    span {
+      font-size: 2.2rem;
+      color: #fff;
+    }
+
+    input {
+      width: 60%;
+      height: 2.5rem;
+      background-color: #3c4044;
+      border: 0;
+      border-radius: 0.3rem;
+      text-indent: 0.3rem;
+      padding: 0.5rem;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+
+  //----------------------------- BUDGET TABLE --------------------------
+  .budget__table {
+    font-size: 2rem;
+    border: 0.2rem solid $budget__position__border--color;
+
+    //------------------------- BUDGET HEADER ------------------------------
+    .budget__header {
+      display: flex;
+      border-bottom: 0.2rem solid $budget__header__border--color;
+      text-align: center;
+      background-color: $budget__header__background--color;
+      color: $budget__header--color;
+
+      &__key {
+        width: 15%;
+        border-right: 0.2rem solid $budget__border--color;
+        padding: 0.5rem 0;
+      }
+
+      &__desc {
+        width: 45%;
+        border-right: 0.2rem solid $budget__border--color;
+        padding: 0.5rem 0;
+      }
+
+      &__cost {
+        width: 20%;
+        border-right: 0.2rem solid $budget__border--color;
+        padding: 0.5rem 0;
+      }
+
+      &__buttons {
+        width: 25%;
+        padding: 0.5rem 0;
+      }
+    } // end of budget header
+
+    //------------------------- BUDGET POSITION ---------------------------
     .budget__position {
       display: flex;
-      justify-content: space-around;
-      padding: 1rem;
-      position: relative;
+      text-align: center;
 
-      &:hover {
-        padding-right: 4rem;
-        transition: padding 0.5s;
+      &:not(:last-child) {
+        border-bottom: 0.1rem solid $budget__position__border--color;
       }
 
-      //----------------------------- POSITIVE ------------------------------
-      &.budget__position--positive {
-        background-color: $position--positive__background--color;
-      }
-      //----------------------------- NEGATIVE ------------------------------
-      &.budget__position--negative {
-        background-color: $position--negative__background--color;
+      .cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4rem;
       }
 
-      &:not(:first-child) {
-        border-top: 1px solid $position__border--color;
+      &__key {
+        width: 15%;
+        border-right: 0.2rem solid $budget__position__border--color;
       }
-      //----------------------------- DELETE BUTTON ------------------------
-      .delete {
-        position: absolute;
-        opacity: 0;
-        right: 1rem;
-      }
-      &:hover {
-        .delete {
-          transition: opacity 1s;
-          opacity: 100;
 
-          width: 2.5rem;
-          height: 2.5rem;
-          background-color: $position__button__background--color;
-          color: white;
-          text-align: center;
-          font-weight: bold;
+      &__desc {
+        width: 45%;
+        border-right: 0.2rem solid $budget__position__border--color;
+        text-indent: 0.2rem;
+        overflow: scroll;
+      }
+
+      &__cost {
+        width: 20%;
+        border-right: 0.2rem solid $budget__position__border--color;
+        text-indent: 0.2rem;
+        overflow: scroll;
+      }
+
+      &__buttons {
+        width: 25%;
+
+        .button {
           border: 0;
-          border-radius: 50%;
+          border-radius: 25%;
+          background-color: $position__button__background--color;
           cursor: pointer;
+
+          img {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
 
           &:hover {
             background-color: darken($position__button__background--color, 5%);
           }
-        }
+
+          &__delete {
+            margin-left: 0.5rem;
+          }
+        } // end of button
+      } // end of buttons
+
+      //----------------------------- POSITIVE ----------------------------
+      &.budget__position--positive {
+        background-color: $position--positive__background--color;
       }
-    } // end of position
+      //----------------------------- NEGATIVE ----------------------------
+      &.budget__position--negative {
+        background-color: $position--negative__background--color;
+      }
+    } // end of budget position
   } // end of balance
-} // end of positons wrapper
+} // end of budget positions
 
 //----------------------------- MEDIA 768px ------------------------
 @media only screen and (min-width: 768px) {
-  .budget__positions {
-    width: 70%;
+  .budget__history {
+    .budget__history--filter {
+      span {
+        font-size: 2.2rem;
+        color: #fff;
+      }
+
+      input {
+        width: 30%;
+      }
+    }
+    .budget__table {
+      .budget__position {
+        &__desc {
+          overflow: unset;
+        }
+
+        &__cost {
+          overflow: unset;
+        }
+      }
+    }
   }
 }
 
 //----------------------------- MEDIA 1200px ------------------------
 @media only screen and (min-width: 1200px) {
-  .budget__positions {
-    width: 55%;
+  .budget__history {
+    width: 60%;
   }
 }
 //----------------------------- Media 1920px ------------------------
 @media only screen and (min-width: 1920px) {
-  .budget__positions {
+  .budget__history {
     width: 40%;
   }
 }

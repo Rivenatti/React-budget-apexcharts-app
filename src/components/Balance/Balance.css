@@ -7,7 +7,7 @@
 }
 
 .balance .totalBalance {
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
   background-color: #2a86ff;
@@ -16,21 +16,21 @@
 }
 
 .balance .row {
-  padding: 1rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .balance .row .income {
+  margin: 0 auto;
+  width: 90%;
   background-color: #58bb43;
   padding: 0.75rem;
   color: #fff;
 }
 
 .balance .row .outcome {
+  margin: 1rem auto 0 auto;
+  width: 90%;
   background-color: #d84e5b;
   padding: 0.75rem;
   color: #fff;
@@ -39,6 +39,33 @@
 @media only screen and (min-width: 768px) {
   .balance {
     width: 70%;
+  }
+  .balance .totalBalance {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #2a86ff;
+    padding: 0.75rem;
+    color: #fff;
+  }
+  .balance .row {
+    margin: 1rem auto 0 auto;
+    width: 90%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .balance .row .income {
+    margin: 0;
+    width: 40%;
+  }
+  .balance .row .outcome {
+    margin: 0;
+    width: 40%;
   }
 }
 

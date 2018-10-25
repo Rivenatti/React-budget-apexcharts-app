@@ -1,6 +1,6 @@
 // VARIABLES
 $balance__boder-bottom--color: #df8c51;
-$totalBalance__background--color: #2a86ff;
+$totalbalance__background--color: #2a86ff;
 $income__background--color: #58bb43;
 $outcome__background--color: #d84e5b;
 $color: #fff;
@@ -15,22 +15,22 @@ $color: #fff;
 
   //-------------------------- TOTAL -------------------------
   .totalBalance {
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
-    background-color: $totalBalance__background--color;
+    background-color: $totalbalance__background--color;
     padding: 0.75rem;
     color: $color;
   }
 
   //-------------------------- ROW --------------------------
   .row {
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-around;
-
+    margin-top: 1rem;
+    text-align: center;
     //-------------------------- INCOME ---------------------
     .income {
+      margin: 0 auto;
+      width: 90%;
       background-color: $income__background--color;
       padding: 0.75rem;
       color: $color;
@@ -38,6 +38,8 @@ $color: #fff;
 
     //-------------------------- OUTCOME --------------------
     .outcome {
+      margin: 1rem auto 0 auto;
+      width: 90%;
       background-color: $outcome__background--color;
       padding: 0.75rem;
       color: $color;
@@ -49,6 +51,33 @@ $color: #fff;
 @media only screen and (min-width: 768px) {
   .balance {
     width: 70%;
+    .totalBalance {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      background-color: $totalBalance__background--color;
+      padding: 0.75rem;
+      color: $color;
+    }
+
+    //-------------------------- ROW --------------------------
+    .row {
+      margin: 1rem auto 0 auto;
+      width: 90%;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      //-------------------------- INCOME ---------------------
+      .income {
+        margin: 0;
+        width: 40%;
+      }
+      //-------------------------- OUTCOME --------------------
+      .outcome {
+        margin: 0;
+        width: 40%;
+      } // end of outcome
+    } // end of row
   }
 }
 

@@ -2,8 +2,10 @@
 $input__border: 0.1rem solid #006eff;
 $input__background--color: #3b3e42;
 $input--color: #fff;
+$submit__border--color: #006eff;
+$submit__hover--color: #5199f823;
 
-//----------------------------- ACTION WRAPPER ----------------------
+//----------------------------- ACTION WRAPPER----------------------
 .budget--action {
   width: 90%;
   padding: 2rem 0;
@@ -34,7 +36,7 @@ $input--color: #fff;
 
     //----------------------------- DESCRIPTION -------------------------
     .description__input {
-      width: 48%;
+      width: 45%;
 
       &:focus {
         border: $input__border;
@@ -43,7 +45,7 @@ $input--color: #fff;
 
     //----------------------------- VALUE -------------------------------
     .value__input {
-      width: 19%;
+      width: 21%;
 
       &:focus {
         border: $input__border;
@@ -60,6 +62,10 @@ $input--color: #fff;
       color: $input--color;
       font-weight: bold;
       cursor: pointer;
+
+      &:hover {
+        background-color: $submit__hover--color;
+      }
     } // end of button
   } // end of form
 } // end of budget--action

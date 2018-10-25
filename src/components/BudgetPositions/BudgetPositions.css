@@ -1,89 +1,175 @@
-.budget__positions {
+.budget__history {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
   padding: 2rem 0;
 }
 
-.budget__positions h1 {
+.budget__history h1 {
   font-size: 3rem;
   color: #df8c51;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.budget__positions .budget__balance {
-  background-color: #ddd;
-  font-size: 2rem;
+.budget__history .budget__history--filter {
+  margin: 0 0 1rem 2rem;
 }
 
-.budget__positions .budget__balance .budget__position {
+.budget__history .budget__history--filter span {
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.budget__history .budget__history--filter input {
+  width: 60%;
+  height: 2.5rem;
+  background-color: #3c4044;
+  border: 0;
+  border-radius: 0.3rem;
+  text-indent: 0.3rem;
+  padding: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.budget__history .budget__table {
+  font-size: 2rem;
+  border: 0.2rem solid #df8c51;
+}
+
+.budget__history .budget__table .budget__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 1rem;
-  position: relative;
-}
-
-.budget__positions .budget__balance .budget__position:hover {
-  padding-right: 4rem;
-  -webkit-transition: padding 0.5s;
-  transition: padding 0.5s;
-}
-
-.budget__positions .budget__balance .budget__position.budget__position--positive {
-  background-color: #58bb43;
-}
-
-.budget__positions .budget__balance .budget__position.budget__position--negative {
-  background-color: #d84e5b;
-}
-
-.budget__positions .budget__balance .budget__position:not(:first-child) {
-  border-top: 1px solid #313439;
-}
-
-.budget__positions .budget__balance .budget__position .delete {
-  position: absolute;
-  opacity: 0;
-  right: 1rem;
-}
-
-.budget__positions .budget__balance .budget__position:hover .delete {
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-  opacity: 100;
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: orangered;
-  color: white;
+  border-bottom: 0.2rem solid #df8c51;
   text-align: center;
-  font-weight: bold;
+  background-color: #3c4044;
+  color: #df8c51;
+}
+
+.budget__history .budget__table .budget__header__key {
+  width: 15%;
+  border-right: 0.2rem solid #df8c51;
+  padding: 0.5rem 0;
+}
+
+.budget__history .budget__table .budget__header__desc {
+  width: 45%;
+  border-right: 0.2rem solid #df8c51;
+  padding: 0.5rem 0;
+}
+
+.budget__history .budget__table .budget__header__cost {
+  width: 20%;
+  border-right: 0.2rem solid #df8c51;
+  padding: 0.5rem 0;
+}
+
+.budget__history .budget__table .budget__header__buttons {
+  width: 25%;
+  padding: 0.5rem 0;
+}
+
+.budget__history .budget__table .budget__position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.budget__history .budget__table .budget__position:not(:last-child) {
+  border-bottom: 0.1rem solid #df8c51;
+}
+
+.budget__history .budget__table .budget__position .cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 4rem;
+}
+
+.budget__history .budget__table .budget__position__key {
+  width: 15%;
+  border-right: 0.2rem solid #df8c51;
+}
+
+.budget__history .budget__table .budget__position__desc {
+  width: 45%;
+  border-right: 0.2rem solid #df8c51;
+  text-indent: 0.2rem;
+  overflow: scroll;
+}
+
+.budget__history .budget__table .budget__position__cost {
+  width: 20%;
+  border-right: 0.2rem solid #df8c51;
+  text-indent: 0.2rem;
+  overflow: scroll;
+}
+
+.budget__history .budget__table .budget__position__buttons {
+  width: 25%;
+}
+
+.budget__history .budget__table .budget__position__buttons .button {
   border: 0;
-  border-radius: 50%;
+  border-radius: 25%;
+  background-color: silver;
   cursor: pointer;
 }
 
-.budget__positions .budget__balance .budget__position:hover .delete:hover {
-  background-color: #e63e00;
+.budget__history .budget__table .budget__position__buttons .button img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.budget__history .budget__table .budget__position__buttons .button:hover {
+  background-color: #b3b3b3;
+}
+
+.budget__history .budget__table .budget__position__buttons .button__delete {
+  margin-left: 0.5rem;
+}
+
+.budget__history .budget__table .budget__position.budget__position--positive {
+  background-color: #58bb43;
+}
+
+.budget__history .budget__table .budget__position.budget__position--negative {
+  background-color: #d84e5b;
 }
 
 @media only screen and (min-width: 768px) {
-  .budget__positions {
-    width: 70%;
+  .budget__history .budget__history--filter span {
+    font-size: 2.2rem;
+    color: #fff;
+  }
+  .budget__history .budget__history--filter input {
+    width: 30%;
+  }
+  .budget__history .budget__table .budget__position__desc {
+    overflow: unset;
+  }
+  .budget__history .budget__table .budget__position__cost {
+    overflow: unset;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .budget__positions {
-    width: 55%;
+  .budget__history {
+    width: 60%;
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  .budget__positions {
+  .budget__history {
     width: 40%;
   }
 }
