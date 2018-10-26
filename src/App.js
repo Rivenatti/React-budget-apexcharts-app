@@ -3,6 +3,7 @@ import ApexCharts from "./components/ApexCharts/ApexCharts";
 import Balance from "./components/Balance/Balance";
 import BudgetAction from "./components/BudgetAction/BudgetAction";
 import BudgetPositions from "./components/BudgetPositions/BudgetPositions";
+import Footer from "./components/Footer/Footer";
 
 class App extends Component {
   // APP STATE
@@ -136,6 +137,7 @@ class App extends Component {
           positions={this.state.positions}
           delete={this.handleDelete}
         />
+        <Footer />
       </div>
     );
   }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./BudgetPositions.css";
 import trash_icon from "../Icons/trash-icon.png";
-import edit_icon from "../Icons/edit-icon.png";
 
 class BudgetPositions extends Component {
   state = {
@@ -11,7 +10,9 @@ class BudgetPositions extends Component {
 
   // HANDLE DELETE
   handleDelete = description => {
-    this.props.delete(description);
+    if (window.confirm("Delete this position?")) {
+      this.props.delete(description);
+    }
   };
 
   // FILTER IF STYLE OF THE POSITION IS POSITIVE OR NEGATIVE
@@ -47,8 +48,8 @@ class BudgetPositions extends Component {
     return (
       <div className="budget__history">
         <h1>History</h1>
-        <div className="budget__history--filter">
-          <span>Filter: </span>
+        <div className="budget__history__filter">
+          <span className="budget__history__filter__span">Filter: </span>
           <input
             type="text"
             name="filter_description"
@@ -63,7 +64,7 @@ class BudgetPositions extends Component {
 
             <div className="budget__header__cost">Cost</div>
 
-            <div className="budget__header__buttons">Action</div>
+            <div className="budget__header__button">Delete</div>
           </div>
           {this.filterPositions().map(position => {
             return (
@@ -80,12 +81,7 @@ class BudgetPositions extends Component {
                 <div className="cell budget__position__cost">
                   {position.value}
                 </div>
-                <div className="cell budget__position__buttons">
-                  {/* EDIT BUTTON */}
-                  <button className="button button__edit">
-                    <img src={edit_icon} alt="edit-icon" />
-                  </button>
-
+                <div className="cell budget__position__button">
                   {/* DELETE BUTTON */}
                   <button
                     className="button button__delete"

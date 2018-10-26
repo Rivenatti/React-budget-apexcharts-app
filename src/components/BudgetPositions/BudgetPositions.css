@@ -3,6 +3,7 @@
   margin: 0 auto;
   overflow: hidden;
   padding: 2rem 0;
+  margin-bottom: 5rem;
 }
 
 .budget__history h1 {
@@ -12,16 +13,17 @@
   margin-bottom: 2rem;
 }
 
-.budget__history .budget__history--filter {
+.budget__history .budget__history__filter {
   margin: 0 0 1rem 2rem;
 }
 
-.budget__history .budget__history--filter span {
+.budget__history .budget__history__filter__span {
   font-size: 2.2rem;
-  color: #fff;
+  color: #df8c51;
+  font-weight: bold;
 }
 
-.budget__history .budget__history--filter input {
+.budget__history .budget__history__filter input {
   width: 60%;
   height: 2.5rem;
   background-color: #3c4044;
@@ -66,7 +68,7 @@
   padding: 0.5rem 0;
 }
 
-.budget__history .budget__table .budget__header__buttons {
+.budget__history .budget__table .budget__header__button {
   width: 25%;
   padding: 0.5rem 0;
 }
@@ -114,27 +116,27 @@
   overflow: scroll;
 }
 
-.budget__history .budget__table .budget__position__buttons {
+.budget__history .budget__table .budget__position__button {
   width: 25%;
 }
 
-.budget__history .budget__table .budget__position__buttons .button {
+.budget__history .budget__table .budget__position__button .button {
   border: 0;
   border-radius: 25%;
-  background-color: silver;
+  background-color: rgba(255, 255, 255, 0.39);
   cursor: pointer;
 }
 
-.budget__history .budget__table .budget__position__buttons .button img {
+.budget__history .budget__table .budget__position__button .button img {
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.budget__history .budget__table .budget__position__buttons .button:hover {
-  background-color: #b3b3b3;
+.budget__history .budget__table .budget__position__button .button:hover {
+  border: 0.2rem solid #006eff;
 }
 
-.budget__history .budget__table .budget__position__buttons .button__delete {
+.budget__history .budget__table .budget__position__button .button__delete {
   margin-left: 0.5rem;
 }
 

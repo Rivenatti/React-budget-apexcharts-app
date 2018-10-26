@@ -4,10 +4,12 @@ $budget__position__border--color: #df8c51;
 $budget__header__background--color: #3c4044;
 $budget__border--color: #df8c51;
 $budget__header--color: #df8c51;
+$budget__filter--color: #df8c51;
 $budget__header__border--color: #df8c51;
 $position--positive__background--color: #58bb43;
 $position--negative__background--color: #d84e5b;
-$position__button__background--color: silver;
+$position__button__background--color: rgba(255, 255, 255, 0.39);
+$position__button--hover__border: 0.2rem solid #006eff;
 
 //-------------------------- BUDGET HISTORY --------------------------
 .budget__history {
@@ -15,6 +17,7 @@ $position__button__background--color: silver;
   margin: 0 auto;
   overflow: hidden;
   padding: 2rem 0;
+  margin-bottom: 5rem;
 
   h1 {
     font-size: 3rem;
@@ -24,12 +27,13 @@ $position__button__background--color: silver;
   }
 
   //---------------------- BUDGET HISTORY FILTER ----------------------
-  .budget__history--filter {
+  .budget__history__filter {
     margin: 0 0 1rem 2rem;
 
-    span {
+    &__span {
       font-size: 2.2rem;
-      color: #fff;
+      color: $budget__filter--color;
+      font-weight: bold;
     }
 
     input {
@@ -76,7 +80,7 @@ $position__button__background--color: silver;
         padding: 0.5rem 0;
       }
 
-      &__buttons {
+      &__button {
         width: 25%;
         padding: 0.5rem 0;
       }
@@ -117,7 +121,7 @@ $position__button__background--color: silver;
         overflow: scroll;
       }
 
-      &__buttons {
+      &__button {
         width: 25%;
 
         .button {
@@ -132,7 +136,7 @@ $position__button__background--color: silver;
           }
 
           &:hover {
-            background-color: darken($position__button__background--color, 5%);
+            border: $position__button--hover__border;
           }
 
           &__delete {

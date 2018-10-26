@@ -5,7 +5,8 @@ class BudgetAction extends Component {
   state = {
     description: "",
     value: "",
-    key: 0
+    key: 0,
+    idEdited: false
   };
 
   getKey = () => {
@@ -73,7 +74,7 @@ class BudgetAction extends Component {
             type="text"
             placeholder="value..."
             name="value"
-            pattern="^-?[1-9]\d*(\.\d+)?$"
+            pattern="[-]?([0-9]*[.])?[0-9]+"
             onChange={this.onInputChangeHandler}
             className="value__input"
             value={this.state.value}
