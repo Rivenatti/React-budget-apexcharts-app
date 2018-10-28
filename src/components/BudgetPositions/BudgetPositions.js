@@ -44,7 +44,6 @@ class BudgetPositions extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <div className="budget__history">
         <h1>History</h1>

@@ -123,7 +123,6 @@ class App extends Component {
   };
 
   render() {
-    // console.log("APP STATE", this.state);
     return (
       <div className="App">
         <ApexCharts series={this.state.series} />
