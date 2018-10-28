@@ -124,18 +124,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <ApexCharts series={this.state.series} />
-        <Balance
-          balance={this.calculateBalance()}
-          income={this.calculateIncome()}
-          outcome={this.calculateOutcome()}
-        />
-        <BudgetAction handleSubmit={this.handleSubmit} />
-        <BudgetPositions
-          positions={this.state.positions}
-          delete={this.handleDelete}
-        />
+      <div>
+        <div className="App">
+          <ApexCharts series={this.state.series} />
+          <Balance
+            balance={this.calculateBalance()}
+            income={this.calculateIncome()}
+            outcome={this.calculateOutcome()}
+          />
+          <BudgetAction handleSubmit={this.handleSubmit} />
+          <BudgetPositions
+            positions={this.state.positions}
+            delete={this.handleDelete}
+          />
+        </div>
         <Footer />
       </div>
     );

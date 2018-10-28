@@ -16,4 +16,9 @@ html {
 body {
   background-color: #313439;
   font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+
+.App {
+  min-height: calc(100vh - 2.5rem);
 }
