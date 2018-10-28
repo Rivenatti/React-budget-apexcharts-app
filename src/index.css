@@ -10,15 +10,15 @@ html {
 }
 
 .apexcharts-canvas {
+  height: 25vh !important;
   margin: 1rem auto 0 auto;
 }
 
 body {
   background-color: #313439;
   font-family: "Roboto", sans-serif;
-  height: 100%;
 }
 
 .App {
-  min-height: calc(100vh - 2.5rem);
+  min-height: calc(100vh - 3.5rem);
 }
